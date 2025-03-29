@@ -5,15 +5,19 @@ import { ArrowDown } from 'lucide-react';
 const HomePage: React.FC = () => {
   return (
     <section id="home" className="relative h-screen flex items-center">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 bg-black">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-          style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1626177539156-7768c8f32f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80')", 
-            opacity: 0.7
-          }}
-        />
+        <video 
+          className="absolute inset-0 w-full h-full object-cover" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          style={{ opacity: 0.7 }}
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-getting-her-hair-styled-in-a-salon-42060-large.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       
       {/* Content */}
