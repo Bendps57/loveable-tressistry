@@ -15,55 +15,55 @@ const galleryItems: GalleryItem[] = [
   {
     id: 1,
     title: 'Tresses Élégantes',
-    image: '/lovable-uploads/0b762f5c-30dd-466c-9c27-bcc29bf9ae8e.png',
+    image: 'https://i.imgur.com/BZYpWqA.jpeg',
     category: 'Tresses'
   },
   {
     id: 2,
     title: 'Tresses Style Africain',
-    image: '/lovable-uploads/8508775b-a336-4c6b-985d-0f2157e5f593.png',
+    image: 'https://i.imgur.com/NlnAeQH.jpeg',
     category: 'Tresses'
   },
   {
     id: 3,
     title: 'Tresses Dorées',
-    image: '/lovable-uploads/c52716b0-f2d7-4714-9b9c-08ce3efbe3af.png',
+    image: 'https://i.imgur.com/Y2bIkP3.jpeg',
     category: 'Tresses'
   },
   {
     id: 4,
     title: 'Tresses Ombré',
-    image: '/lovable-uploads/dd212111-92d2-4761-a141-698a7490683d.png',
+    image: 'https://i.imgur.com/mhidlLM.jpeg',
     category: 'Tresses'
   },
   {
     id: 5,
     title: 'Tresses Enfant',
-    image: '/lovable-uploads/db5ba1d3-b699-4dd8-9c9a-a2ba414eed0f.png',
+    image: 'https://i.imgur.com/zNIu0J0.jpeg',
     category: 'Tresses'
   },
   {
     id: 6,
     title: 'Tresses Artistiques',
-    image: '/lovable-uploads/803feba6-c952-4bb6-bdd0-19c3931ccac6.png',
+    image: 'https://i.imgur.com/7iSgL3w.jpeg',
     category: 'Tresses'
   },
   {
     id: 7,
     title: 'Tresses Colorées',
-    image: '/lovable-uploads/dd9d5872-3e7c-487c-8653-d7526bdce82c.png',
+    image: 'https://i.imgur.com/Eo0mHsM.jpeg',
     category: 'Tresses'
   },
   {
     id: 8,
     title: 'Tresses Coiffées',
-    image: '/lovable-uploads/07ae6b25-f3a5-4c0f-a9e0-d6a6991edba0.png',
+    image: 'https://i.imgur.com/YpkO3Gr.jpeg',
     category: 'Tresses'
   },
   {
     id: 9,
     title: 'Tresses Ondulées',
-    image: '/lovable-uploads/18593ac0-9be5-4753-b3b1-9d5fb7c64ea2.png',
+    image: 'https://i.imgur.com/BNDt6z9.jpeg',
     category: 'Tresses'
   }
 ];
