@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
+import { Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -16,6 +17,17 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-white/80">
               Spécialiste des tresses africaines. Nous sublimez votre beauté naturelle avec des créations uniques et personnalisées.
             </p>
+            <div className="flex mt-6">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61562533844626" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-loveable-gold transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+            </div>
           </div>
           
           {/* Quick Links */}

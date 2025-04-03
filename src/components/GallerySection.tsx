@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent } from '@/components/ui/card';
+import { Facebook } from 'lucide-react';
 
 interface GalleryItem {
   id: number;
@@ -86,10 +87,10 @@ const GallerySection: React.FC = () => {
           <Separator className="w-24 h-1 bg-tressesbyhoney-gold mx-auto mt-6" />
         </div>
 
-        {/* Gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Gallery grid with improved presentation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
-            <Card key={item.id} className="group overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
+            <Card key={item.id} className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative">
                   <AspectRatio ratio={1 / 1} className="w-full">
@@ -110,10 +111,21 @@ const GallerySection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-10">
-          <Button className="bg-tressesbyhoney-gold hover:bg-tressesbyhoney-copper text-white">
-            Voir plus de créations
-          </Button>
+        {/* Facebook CTA section */}
+        <div className="mt-16 text-center">
+          <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-playfair font-semibold mb-4 text-loveable-chocolate">Découvrez plus de nos créations</h3>
+            <p className="text-muted-foreground mb-6">
+              Suivez-nous sur Facebook pour voir nos dernières réalisations et restez informés de nos promotions exclusives.
+            </p>
+            <Button 
+              className="bg-[#1877F2] hover:bg-[#0e5ecd] text-white gap-2 py-2 px-5 text-base"
+              onClick={() => window.open('https://www.facebook.com/profile.php?id=61562533844626', '_blank')}
+            >
+              <Facebook className="w-5 h-5" />
+              Voir nos réalisations sur Facebook
+            </Button>
+          </div>
         </div>
       </div>
     </section>
