@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Card, CardContent } from '@/components/ui/card';
 
 interface GalleryItem {
   id: number;
@@ -85,22 +86,27 @@ const GallerySection: React.FC = () => {
           <Separator className="w-24 h-1 bg-tressesbyhoney-gold mx-auto mt-6" />
         </div>
 
-        {/* Gallery grid - Pas besoin de filtres spécifiques puisqu'il n'y a qu'une catégorie */}
+        {/* Gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
-            <div key={item.id} className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="aspect-square w-full overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <h3 className="text-white text-xl font-semibold">{item.title}</h3>
-                <p className="text-white/80 text-sm">{item.category}</p>
-              </div>
-            </div>
+            <Card key={item.id} className="group overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <AspectRatio ratio={1 / 1} className="w-full">
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h3 className="text-white text-xl font-semibold">{item.title}</h3>
+                    <p className="text-white/80 text-sm">{item.category}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
