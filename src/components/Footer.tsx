@@ -5,6 +5,8 @@ import { Separator } from '@/components/ui/separator';
 import { Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const facebookUrl = "https://www.facebook.com/profile.php?id=61562533844626";
+  
   return (
     <footer className="bg-loveable-chocolate text-white">
       <div className="container mx-auto px-4 py-12">
@@ -19,7 +21,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex mt-6">
               <a 
-                href="https://www.facebook.com/profile.php?id=61562533844626" 
+                href={facebookUrl}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-loveable-gold transition-colors"
@@ -78,9 +80,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <address className="not-italic text-white/80 space-y-2">
-              <p>123 Rue des Tresses, 75001 Paris</p>
-              <p>Téléphone: +33 1 23 45 67 89</p>
-              <p>Email: contact@tressesbyhoney.fr</p>
+              <p>60 rue de Verdun, 57700 Hayange, France</p>
+              <p>Téléphone: +33 6 13 66 37 80</p>
+              <p>Email: ruthtshipama69@gmail.com</p>
             </address>
           </div>
         </div>

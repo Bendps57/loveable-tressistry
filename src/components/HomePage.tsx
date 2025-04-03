@@ -4,6 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const facebookUrl = "https://www.facebook.com/profile.php?id=61562533844626";
+  const whatsappUrl = "https://wa.me/33613663780";
   
   return (
     <section id="home" className="relative h-screen flex items-center">
@@ -32,7 +33,7 @@ const HomePage: React.FC = () => {
             Sublimez votre beauté naturelle avec TressesByHoney
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#booking" className="btn-primary text-center">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center">
               Prendre rendez-vous
             </a>
             <a 
