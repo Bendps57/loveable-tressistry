@@ -82,13 +82,13 @@ const Footer: React.FC = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">
               <li>
-                <a href="#" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Politique de confidentialité</a>
+                <Link to="/privacy-policy" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Politique de confidentialité</Link>
               </li>
               <li>
-                <a href="#" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Conditions d'utilisation</a>
+                <Link to="/terms-of-service" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Conditions d'utilisation</Link>
               </li>
               <li>
-                <a href="#" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Mentions légales</a>
+                <Link to="/legal-notice" className="text-white/60 hover:text-loveable-gold transition-colors text-sm">Mentions légales</Link>
               </li>
             </ul>
           </div>

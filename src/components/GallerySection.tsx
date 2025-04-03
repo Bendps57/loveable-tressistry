@@ -108,7 +108,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/LlvMDx0.jpeg" 
+                    src="https://i.imgur.com/a9a41cb8.jpeg" 
                     alt="Tresses africaines style lemonade braids" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
