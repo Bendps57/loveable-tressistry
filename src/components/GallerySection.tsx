@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
@@ -58,10 +58,22 @@ const galleryItems: GalleryItem[] = [
     title: 'Style Créatif',
     image: 'https://i.imgur.com/YULgjVa.jpg',
     category: 'Créations'
+  },
+  {
+    id: 9,
+    title: 'Tresses Ondulées',
+    image: '/lovable-uploads/18593ac0-9be5-4753-b3b1-9d5fb7c64ea2.png',
+    category: 'Tresses Ondulées'
   }
 ];
 
 const GallerySection: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  
+  const filteredItems = activeFilter 
+    ? galleryItems.filter(item => item.category === activeFilter)
+    : galleryItems;
+
   return (
     <section id="gallery" className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
@@ -75,16 +87,28 @@ const GallerySection: React.FC = () => {
 
         {/* Gallery filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <Button variant="outline" className="rounded-full">Toutes</Button>
-          <Button variant="outline" className="rounded-full">Box Braids</Button>
-          <Button variant="outline" className="rounded-full">Cornrows</Button>
-          <Button variant="outline" className="rounded-full">Twists</Button>
-          <Button variant="outline" className="rounded-full">Tresses Collées</Button>
+          <Button 
+            variant={activeFilter === null ? "default" : "outline"} 
+            className="rounded-full"
+            onClick={() => setActiveFilter(null)}
+          >
+            Toutes
+          </Button>
+          {Array.from(new Set(galleryItems.map(item => item.category))).map(category => (
+            <Button 
+              key={category}
+              variant={activeFilter === category ? "default" : "outline"} 
+              className="rounded-full"
+              onClick={() => setActiveFilter(category)}
+            >
+              {category}
+            </Button>
+          ))}
         </div>
 
         {/* Gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item) => (
+          {filteredItems.map((item) => (
             <div key={item.id} className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
               <div className="aspect-square w-full overflow-hidden">
                 <img 
