@@ -57,23 +57,9 @@ const Footer: React.FC = () => {
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Nos Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#booking" className="text-white/80 hover:text-loveable-gold transition-colors">Box Braids</a>
-              </li>
-              <li>
-                <a href="#booking" className="text-white/80 hover:text-loveable-gold transition-colors">Cornrows</a>
-              </li>
-              <li>
-                <a href="#booking" className="text-white/80 hover:text-loveable-gold transition-colors">Twists</a>
-              </li>
-              <li>
-                <a href="#booking" className="text-white/80 hover:text-loveable-gold transition-colors">Fulani Braids</a>
-              </li>
-              <li>
-                <a href="#booking" className="text-white/80 hover:text-loveable-gold transition-colors">Goddess Braids</a>
-              </li>
-            </ul>
+            <p className="text-white/80">
+              Chaque coiffure est unique, tout comme vous ! Nous vous proposons une approche personnalisée pour trouver la coiffure qui vous correspond parfaitement.
+            </p>
           </div>
           
           {/* Contact */}
@@ -106,6 +92,17 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+        </div>
+        
+        <div className="text-center mt-6">
+          <a 
+            href="https://www.elimyt.com" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 hover:text-loveable-gold transition-colors text-sm inline-block border border-white/20 rounded-md px-4 py-1 hover:border-loveable-gold"
+          >
+            Créé par eLimyt
+          </a>
         </div>
       </div>
     </footer>
