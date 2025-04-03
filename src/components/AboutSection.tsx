@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img 
-              src="https://i.imgur.com/LlvMDx0.jpeg" 
+              src="https://i.imgur.com/Ja9hnFq.jpeg" 
               alt="Notre salon TressesByHoney" 
               className="rounded-lg shadow-xl w-full h-auto object-cover grayscale"
             />
