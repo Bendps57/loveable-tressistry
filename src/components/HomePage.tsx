@@ -3,6 +3,8 @@ import React from 'react';
 import { ArrowDown } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+  const facebookUrl = "https://www.facebook.com/profile.php?id=61562533844626";
+  
   return (
     <section id="home" className="relative h-screen flex items-center">
       {/* Background Video */}
@@ -33,7 +35,12 @@ const HomePage: React.FC = () => {
             <a href="#booking" className="btn-primary text-center">
               Prendre rendez-vous
             </a>
-            <a href="#gallery" className="btn-outline text-white border-white hover:bg-white hover:text-loveable-chocolate text-center">
+            <a 
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="btn-outline text-white border-white hover:bg-white hover:text-loveable-chocolate text-center"
+            >
               Voir nos créations
             </a>
           </div>
