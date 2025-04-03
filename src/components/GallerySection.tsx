@@ -14,38 +14,50 @@ const galleryItems: GalleryItem[] = [
   {
     id: 1,
     title: 'Box Braids Élégantes',
-    image: 'https://images.unsplash.com/photo-1599387737838-646405046442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/6F9HqF3.jpg',
     category: 'Box Braids'
   },
   {
     id: 2,
     title: 'Cornrows Sophistiqués',
-    image: 'https://images.unsplash.com/photo-1626177493371-57a4d010b771?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/d8sOO7B.jpg',
     category: 'Cornrows'
   },
   {
     id: 3,
     title: 'Twists Naturelles',
-    image: 'https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/o44WJJ9.jpg',
     category: 'Twists'
   },
   {
     id: 4,
     title: 'Tresses Collées',
-    image: 'https://images.unsplash.com/photo-1626177439568-7615db6c651e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/n1K0SWC.jpg',
     category: 'Tresses Collées'
   },
   {
     id: 5,
     title: 'Fulani Braids',
-    image: 'https://images.unsplash.com/photo-1604514462150-31b02ef3be63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/YXQXDpN.jpg',
     category: 'Fulani Braids'
   },
   {
     id: 6,
     title: 'Goddess Braids',
-    image: 'https://images.unsplash.com/photo-1610125594276-3dad28214a84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.imgur.com/AvCrX2R.jpg',
     category: 'Goddess Braids'
+  },
+  {
+    id: 7,
+    title: 'Tresses Élégantes',
+    image: 'https://i.imgur.com/Lm8TFOk.jpg',
+    category: 'Tresses'
+  },
+  {
+    id: 8,
+    title: 'Style Créatif',
+    image: 'https://i.imgur.com/YULgjVa.jpg',
+    category: 'Créations'
   }
 ];
 

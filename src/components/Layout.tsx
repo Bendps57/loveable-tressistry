@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <h1 className="text-2xl font-bold text-loveable-chocolate">
-              Loveable<span className="text-loveable-gold">.</span>
+              TressesByHoney<span className="text-loveable-gold">.</span>
             </h1>
           </Link>
 

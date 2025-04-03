@@ -7,15 +7,15 @@ const AboutSection: React.FC = () => {
     <section id="about" className="py-16 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="section-title">À Propos de Loveable</h2>
+          <h2 className="section-title">À Propos de TressesByHoney</h2>
           <Separator className="w-24 h-1 bg-loveable-gold mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1589483232748-515c025575bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1024&q=80" 
-              alt="Notre salon Loveable" 
+              src="https://i.imgur.com/YULgjVa.jpg" 
+              alt="Notre salon TressesByHoney" 
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
@@ -27,12 +27,12 @@ const AboutSection: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-loveable-chocolate">Notre Histoire</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Fondé avec passion en 2018, Loveable s'est donné pour mission de célébrer et préserver l'art ancestral des tresses africaines. Notre fondatrice, passionnée par cette tradition depuis son enfance, a voulu créer un espace où chaque client se sent valorisé et sublimé.
+              Fondé avec passion en 2018, TressesByHoney s'est donné pour mission de célébrer et préserver l'art ancestral des tresses africaines. Notre fondatrice, passionnée par cette tradition depuis son enfance, a voulu créer un espace où chaque client se sent valorisé et sublimé.
             </p>
             
             <h3 className="text-2xl font-semibold text-loveable-chocolate pt-4">Notre Philosophie</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Chez Loveable, nous croyons que chaque tresse raconte une histoire. Notre approche personnalisée assure que chaque cliente reçoit une création unique, adaptée à sa personnalité et à son style. Nous utilisons uniquement des produits de qualité supérieure, respectueux des cheveux et de l'environnement.
+              Chez TressesByHoney, nous croyons que chaque tresse raconte une histoire. Notre approche personnalisée assure que chaque cliente reçoit une création unique, adaptée à sa personnalité et à son style. Nous utilisons uniquement des produits de qualité supérieure, respectueux des cheveux et de l'environnement.
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">

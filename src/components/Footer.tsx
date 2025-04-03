@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           {/* Logo & Description */}
           <div>
             <Link to="/" className="text-2xl font-bold">
-              Loveable<span className="text-loveable-gold">.</span>
+              TressesByHoney<span className="text-loveable-gold">.</span>
             </Link>
             <p className="mt-4 text-white/80">
               Spécialiste des tresses africaines. Nous sublimez votre beauté naturelle avec des créations uniques et personnalisées.
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
             <address className="not-italic text-white/80 space-y-2">
               <p>123 Rue des Tresses, 75001 Paris</p>
               <p>Téléphone: +33 1 23 45 67 89</p>
-              <p>Email: contact@loveable-tresses.fr</p>
+              <p>Email: contact@tressesbyhoney.fr</p>
             </address>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} Loveable. Tous droits réservés.
+            &copy; {new Date().getFullYear()} TressesByHoney. Tous droits réservés.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">

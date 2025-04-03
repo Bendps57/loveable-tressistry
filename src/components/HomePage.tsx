@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
             L'élégance des tresses africaines à votre portée
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
-            Sublimez votre beauté naturelle avec des créations uniques et personnalisées
+            Sublimez votre beauté naturelle avec TressesByHoney
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#booking" className="btn-primary text-center">
