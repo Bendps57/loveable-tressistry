@@ -28,6 +28,22 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
+                    src="https://i.imgur.com/gIc9hO0.jpeg" 
+                    alt="Tresses africaines style unique" 
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
+                    loading="lazy"
+                  />
+                </AspectRatio>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Image 2 */}
+          <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+            <CardContent className="p-0">
+              <div className="relative">
+                <AspectRatio ratio={1 / 1} className="w-full">
+                  <img 
                     src="https://i.imgur.com/MZV3Pvs.jpg" 
                     alt="Tresses africaines style box braids" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
@@ -38,7 +54,7 @@ const GallerySection: React.FC = () => {
             </CardContent>
           </Card>
           
-          {/* Image 2 */}
+          {/* Image 3 */}
           <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
             <CardContent className="p-0">
               <div className="relative">
@@ -54,7 +70,7 @@ const GallerySection: React.FC = () => {
             </CardContent>
           </Card>
           
-          {/* Image 3 */}
+          {/* Image 4 */}
           <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
             <CardContent className="p-0">
               <div className="relative">
@@ -70,7 +86,7 @@ const GallerySection: React.FC = () => {
             </CardContent>
           </Card>
           
-          {/* Image 4 */}
+          {/* Image 5 */}
           <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
             <CardContent className="p-0">
               <div className="relative">
@@ -86,7 +102,7 @@ const GallerySection: React.FC = () => {
             </CardContent>
           </Card>
           
-          {/* Image 5 */}
+          {/* Image 6 */}
           <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
             <CardContent className="p-0">
               <div className="relative">
@@ -94,22 +110,6 @@ const GallerySection: React.FC = () => {
                   <img 
                     src="https://i.imgur.com/qsLtXQl.jpg" 
                     alt="Tresses africaines style lemonade braids" 
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
-                    loading="lazy"
-                  />
-                </AspectRatio>
-              </div>
-            </CardContent>
-          </Card>
-          
-          {/* Image 6 */}
-          <Card className="group overflow-hidden rounded-lg border-0 shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
-            <CardContent className="p-0">
-              <div className="relative">
-                <AspectRatio ratio={1 / 1} className="w-full">
-                  <img 
-                    src="https://i.imgur.com/YWy0hQy.jpg" 
-                    alt="Tresses africaines style goddess braids" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
                   />
