@@ -3,10 +3,13 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { MapPin, Phone, Mail, Clock, Send, Facebook } from 'lucide-react';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 const ContactSection: React.FC = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -22,47 +25,81 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formsubmit.co/ruthtshipama69@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: "Nouveau message du site TressesByHoney",
-        }),
+      // Using direct form submission to FormSubmit.co for more reliable delivery
+      const form = e.target as HTMLFormElement;
+      const formElement = document.createElement('form');
+      formElement.method = 'POST';
+      formElement.action = 'https://formsubmit.co/ruthtshipama69@gmail.com';
+      formElement.style.display = 'none';
+
+      // Add all form data as hidden inputs
+      Object.entries(formData).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+      
+        formElement.appendChild(input);
+      });
+
+      // Add custom subject
+      const subjectInput = document.createElement('input');
+      subjectInput.type = 'hidden';
+      subjectInput.name = '_subject';
+      subjectInput.value = 'Nouveau message du site TressesByHoney';
+      formElement.appendChild(subjectInput);
+
+      // Add return URL (current page)
+      const redirectInput = document.createElement('input');
+      redirectInput.type = 'hidden';
+      redirectInput.name = '_next';
+      redirectInput.value = window.location.href;
+      formElement.appendChild(redirectInput);
+
+      // Add captcha
+      const captchaInput = document.createElement('input');
+      captchaInput.type = 'hidden';
+      captchaInput.name = '_captcha';
+      captchaInput.value = 'true';
+      formElement.appendChild(captchaInput);
+
+      // Disable default FormSubmit thank you page
+      const autoResponseInput = document.createElement('input');
+      autoResponseInput.type = 'hidden';
+      autoResponseInput.name = '_autoresponse';
+      autoResponseInput.value = 'Merci pour votre message. Nous vous répondrons bientôt.';
+      formElement.appendChild(autoResponseInput);
+
+      // Append form to body, submit it, then remove it
+      document.body.appendChild(formElement);
+      formElement.submit();
+      
+      // Show success message
+      toast({
+        title: "Message envoyé",
+        description: "Nous vous répondrons dans les plus brefs délais.",
       });
       
-      if (response.ok) {
-        toast({
-          title: "Message envoyé",
-          description: "Nous vous répondrons dans les plus brefs délais.",
-        });
-        
-        // Reset form
-        setFormData({
-          nom: '',
-          prenom: '',
-          email: '',
-          telephone: '',
-          message: ''
-        });
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Erreur",
-          description: "Une erreur est survenue lors de l'envoi du message.",
-        });
-      }
+      // Reset form
+      setFormData({
+        nom: '',
+        prenom: '',
+        email: '',
+        telephone: '',
+        message: ''
+      });
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         variant: "destructive",
         title: "Erreur",
         description: "Une erreur est survenue lors de l'envoi du message.",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -84,28 +121,33 @@ const ContactSection: React.FC = () => {
           <div className="bg-secondary rounded-lg p-8 shadow-sm">
             <h3 className="text-2xl font-semibold mb-6 text-loveable-chocolate">Envoyez-nous un message</h3>
             
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6" onSubmit={handleSubmit} action="https://formsubmit.co/ruthtshipama69@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Nouveau message du site TressesByHoney" />
+              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_next" value={window.location.href} />
+              <input type="hidden" name="_autoresponse" value="Merci pour votre message. Nous vous répondrons bientôt." />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">Nom</label>
-                  <input 
+                  <Input 
                     type="text"
                     name="nom" 
                     value={formData.nom}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-loveable-gold" 
+                    className="w-full focus:ring-2 focus:ring-loveable-gold" 
                     placeholder="Votre nom"
                     required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Prénom</label>
-                  <input 
+                  <Input 
                     type="text"
                     name="prenom"
                     value={formData.prenom}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-loveable-gold" 
+                    className="w-full focus:ring-2 focus:ring-loveable-gold" 
                     placeholder="Votre prénom"
                     required
                   />
@@ -114,12 +156,12 @@ const ContactSection: React.FC = () => {
               
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
-                <input 
+                <Input 
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-loveable-gold" 
+                  className="w-full focus:ring-2 focus:ring-loveable-gold" 
                   placeholder="votre@email.com"
                   required
                 />
@@ -127,31 +169,35 @@ const ContactSection: React.FC = () => {
               
               <div>
                 <label className="block text-sm font-medium mb-2">Téléphone</label>
-                <input 
+                <Input 
                   type="tel"
                   name="telephone"
                   value={formData.telephone}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-loveable-gold" 
+                  className="w-full focus:ring-2 focus:ring-loveable-gold" 
                   placeholder="Votre numéro de téléphone"
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea 
+                <Textarea 
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-32 px-3 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-loveable-gold" 
+                  className="w-full h-32 resize-none focus:ring-2 focus:ring-loveable-gold" 
                   placeholder="Votre message..."
                   required
                 />
               </div>
               
-              <Button type="submit" className="w-full bg-loveable-gold hover:bg-loveable-copper text-white flex items-center justify-center gap-2">
+              <Button 
+                type="submit" 
+                className="w-full bg-loveable-gold hover:bg-loveable-copper text-white flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+              >
                 <Send className="w-4 h-4" />
-                Envoyer le message
+                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
               </Button>
             </form>
           </div>
