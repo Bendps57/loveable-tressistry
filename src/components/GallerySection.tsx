@@ -28,7 +28,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/gIc9hO0.jpeg" 
+                    src="https://i.imgur.com/ldn8Su9.jpeg" 
                     alt="Tresses africaines style unique" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
@@ -44,7 +44,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/MZV3Pvs.jpg" 
+                    src="https://i.imgur.com/83D0pMg.jpeg" 
                     alt="Tresses africaines style box braids" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
@@ -60,7 +60,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/g8HFBH8.jpg" 
+                    src="https://i.imgur.com/TxFlLyS.jpeg" 
                     alt="Tresses africaines style fulani" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
@@ -76,7 +76,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/JV21VdX.jpg" 
+                    src="https://i.imgur.com/sEaYXNA.jpeg" 
                     alt="Tresses africaines style cornrows" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
@@ -92,7 +92,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/N9JMuFi.jpg" 
+                    src="https://i.imgur.com/FRxZyVD.jpeg" 
                     alt="Tresses africaines style twist" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
@@ -108,7 +108,7 @@ const GallerySection: React.FC = () => {
               <div className="relative">
                 <AspectRatio ratio={1 / 1} className="w-full">
                   <img 
-                    src="https://i.imgur.com/qsLtXQl.jpg" 
+                    src="https://i.imgur.com/LlvMDx0.jpeg" 
                     alt="Tresses africaines style lemonade braids" 
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110 grayscale"
                     loading="lazy"
