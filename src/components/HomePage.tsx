@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
           muted 
           loop 
           playsInline
-          style={{ opacity: 0.7 }}
+          style={{ opacity: 0.5 }}
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-getting-her-hair-styled-in-a-salon-42060-large.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -26,10 +26,10 @@ const HomePage: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-black/70 p-4 inline-block">
             L'élégance des tresses africaines à votre portée
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 bg-black/70 p-2 inline-block">
             Sublimez votre beauté naturelle avec TressesByHoney
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -60,3 +60,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
