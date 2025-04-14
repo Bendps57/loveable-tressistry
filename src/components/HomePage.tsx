@@ -10,27 +10,26 @@ const HomePage: React.FC = () => {
   
   return (
     <section id="home" className="relative h-screen flex items-center">
-      {/* Background Image - black and white */}
-      <div className="absolute inset-0 bg-black">
+      {/* Background Image - tresses africaines */}
+      <div className="absolute inset-0">
         <div 
           className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3')",
-            opacity: 0.6,
-            filter: "grayscale(100%)"
+            backgroundImage: "url('https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3')",
+            opacity: 0.85,
           }}
         />
         {/* Additional overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
       </div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
         <div className={`max-w-3xl ${isMobile ? '' : 'ml-8'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-black/70 p-4 inline-block">
+          <h1 className="text-4xl md:text-6xl font-bold text-loveable-gold mb-6 text-shadow-lg">
             L'élégance des tresses africaines à votre portée
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 bg-black/70 p-2 inline-block">
+          <p className="text-xl md:text-2xl text-white/90 mb-8">
             Sublimez votre beauté naturelle avec TressesByHoney
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
