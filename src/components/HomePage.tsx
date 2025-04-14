@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
         <div 
           className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3')",
+            backgroundImage: "url('https://i.imgur.com/0Vp4KIN.jpeg')",
             opacity: 0.85,
           }}
         />
