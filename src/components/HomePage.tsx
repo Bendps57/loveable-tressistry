@@ -1,31 +1,32 @@
 
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HomePage: React.FC = () => {
   const facebookUrl = "https://www.facebook.com/profile.php?id=61562533844626";
   const whatsappUrl = "https://wa.me/33613663780";
+  const isMobile = useIsMobile();
   
   return (
     <section id="home" className="relative h-screen flex items-center">
-      {/* Background Video */}
+      {/* Background Image - black and white */}
       <div className="absolute inset-0 bg-black">
-        <video 
-          className="absolute inset-0 w-full h-full object-cover" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          style={{ opacity: 0.5 }}
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-getting-her-hair-styled-in-a-salon-42060-large.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div 
+          className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3')",
+            opacity: 0.6,
+            filter: "grayscale(100%)"
+          }}
+        />
+        {/* Additional overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
-        <div className="max-w-3xl">
+        <div className={`max-w-3xl ${isMobile ? '' : 'ml-8'}`}>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-black/70 p-4 inline-block">
             L'élégance des tresses africaines à votre portée
           </h1>
@@ -60,4 +61,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
