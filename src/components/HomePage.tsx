@@ -10,12 +10,12 @@ const HomePage: React.FC = () => {
   
   return (
     <section id="home" className="relative h-screen flex items-center">
-      {/* Background Image - tresses africaines */}
+      {/* Background Image - tresses africaines optimisée */}
       <div className="absolute inset-0">
         <div 
           className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://i.imgur.com/0Vp4KIN.jpeg')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1594736797933-d0301ba6fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
           }}
         />
         {/* Léger overlay pour améliorer la lisibilité du texte */}
