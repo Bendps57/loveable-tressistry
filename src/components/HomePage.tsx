@@ -16,20 +16,19 @@ const HomePage: React.FC = () => {
           className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
           style={{ 
             backgroundImage: "url('https://i.imgur.com/0Vp4KIN.jpeg')",
-            opacity: 0.85,
           }}
         />
-        {/* Additional overlay for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
+        {/* Léger overlay pour améliorer la lisibilité du texte */}
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
         <div className={`max-w-3xl ${isMobile ? '' : 'ml-8'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold text-loveable-gold mb-6 text-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow-lg">
             L'élégance des tresses africaines à votre portée
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
+          <p className="text-xl md:text-2xl text-white/95 mb-8 text-shadow-lg">
             Sublimez votre beauté naturelle avec TressesByHoney
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
